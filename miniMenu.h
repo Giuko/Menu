@@ -124,9 +124,10 @@ char op2[LEN_SCREEN], char op3[LEN_SCREEN], char op4[LEN_SCREEN]) {
 	strcpy(operations[3].string, op3);
 	strcpy(operations[4].string, op4);
 	for (i = 0; i < MAX_OP; ++i)
-		if(operations[i].string[0] != '\0')
-			num_op++;	
-	
+		if(operations[i].string[0] != '\0'){
+			num_op++;		
+		}else
+			break;
 	int selectedOp = 0;
 	do{
 		c = 0;		 
