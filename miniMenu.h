@@ -23,7 +23,7 @@
 #define SOURCE_CODE "Origine.c"				//The name of the source code
 #define EXIT_CODE 300					//Code for close the program
 
-#define MAX_OP 6					//Max number of operation
+#define MAX_OP 6					//Max number of operation, it can be > 6
 
 #define getch _getch					//For VS
 
@@ -115,12 +115,11 @@ int menu(char title[LEN_SCREEN], const char *op, ...) {
 	FILE* fp;
 	char buffer[LEN_SCREEN];
 	stringArray_t operations[MAX_OP];
-	//char* string;
 	va_list args;
 
 	va_start(args, op);
-	//strcpy(string, op);
 	
+	//It ends when op is NULL or num_op = MAX_OP
 	while (op && num_op < MAX_OP) {
 		puts(op);
 		strcpy(operations[num_op].string, op);
@@ -128,6 +127,7 @@ int menu(char title[LEN_SCREEN], const char *op, ...) {
 		num_op++;
 	}
 
+	//By default the selected operation is the first
 	int selectedOp = 0;
 	do {
 		c = 0;
