@@ -1,7 +1,9 @@
-#include "miniMenu2.h"
-int main(){
-	int c;
-	c = menu("PROVA", "Prova 1", "Prova 2", "Prova 3", "Prova 4", "Prova 5", NULL);
+#include "menu.h"
+#include <stdio.h>
+int main(void){
+	int c1, c2;
+	c1 = horizontalMenu("TITOLO", "0", "1", "2", "3", NULL);
+	c2 = verticalMenu("TITOLO", "0", "1", "2","3", NULL);
 	
-	return c;
+	printf("Choice 1: %d\nChoice 2: %d", c1, c2);
 }
