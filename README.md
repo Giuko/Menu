@@ -1,4 +1,4 @@
-# MiniMenu
+# Menu
 To use the library correctly:
   1) Add in code the library: menu.h
   2) Two function can be used: 
